@@ -27,5 +27,8 @@ public class Train {
     @ManyToOne
     @JoinColumn(name= "destination_station_id")
     private Station destinationStation;
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    private TrainImage trainImage;
+
 
 }
